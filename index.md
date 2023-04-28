@@ -51,12 +51,17 @@ Maintained by Discord User Kytavian#4406.
 If you have a project you'd like to have listed here, contact a maintainer in discord to talk about it.
 
 ## Market data can be also be obtained through the API
-### API Enpoints
-- [Swagger documentation available here](https://www.albion-online-data.com/api/swagger). 
-- Item IDs can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted)
-, for use in the API.
+### API Host URLs
 
-For any of the following URLs, `.json` is optional and is the default. For XML, replace `.json` with `.xml`.  Prefix the API paths with the DNS name `https://west.albion-online-data.com` for the Albion West data or `https://east.albion-online-data.com` for the Albion East data.
+- Albion Online West Server: `https://west.albion-online-data.com`
+- Albion Online East Server: `https://east.albion-online-data.com`
+
+### API Enpoints
+- [Swagger documentation available here](https://west.albion-online-data.com/api/swagger).
+- Item IDs can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted) items.txt or items.json files.
+- Location IDs or String Names can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted) world.txt or world.json files.
+
+For any of the following URLs, `.json` is optional and is the default. For XML, replace `.json` with `.xml`.
 
 - Current Prices (Table View): [`/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2`](https://west.albion-online-data.com/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
 - Current Prices (JSON): [`/api/v2/stats/prices/T4_BAG,T5_BAG.json?locations=Caerleon,Bridgewatch&qualities=2`](https://west.albion-online-data.com/api/v2/stats/prices/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
@@ -237,14 +242,22 @@ Albion Data Project here are some things you will need to know:
   - West Game Server:  nats://public:thenewalbiondata@west.albion-online-data.com:4222
   - East Game Server:  nats://public:thenewalbiondata@east.albion-online-data.com:24222
 - NATS Topics:
-  - `goldprices.deduped`
-  - `marketorders.deduped`
-  - `mapdata.deduped`
+  - `goldprices.ingest` (all gold prices that come in from data clients, including all duplicates)
+  - `marketorders.ingest` (all orders that come in from data clients, including all duplicates)
+  - `markethistories.ingest` (all histories that come in from data clients, including all duplicates)
+  - `goldprices.deduped` (deduped gold prices that come in from data clients, read below about duplicate messages)
+  - `marketorders.deduped` (deduped orders prices that come in from data clients, read below about duplicate messages)
+  - `markethistories.deduped` (deduped histories prices that come in from data clients, read below about duplicate messages)
 - Structure of data messages: [albiondata-client/lib](https://github.com/ao-data/albiondata-client/tree/master/lib)
 
-A note on duplicate messages. As information comes into the NATS Server it is looked at and deduplicated over a 5 minute
+Note: Duplicate Messages - As information comes into the NATS Server it is looked at and deduplicated over a 10 minute
  window. As a subscriber the goal is that you should only get the same message once every 5 minutes. This is of course 
  open for change as we go however. The reason we are sending the same message at all is two fold.
+
+Note: Timestamp on Market History data is in Ticks. To convert ticks to epoch (a more common time format), you would do the following:
+`(638181504000000000 / 10000) - 62136892800000` which in this example is `1681257600000`. Using [https://www.unixtimestamp.com/](https://www.unixtimestamp.com/)
+to convert `1681257600000` to a human readable format results in `Wed Apr 12 2023 00:00:00 GMT+0000`. This should be enough
+info to get you going in the programming/scripting language of your choosing to convert the timestamp to something usable.
 
 New people connecting to the network may have missed previous messages. Along with that however we don’t have a good way
  of noticing things like market orders completing. To remove market orders from your application the current best idea 
