@@ -56,18 +56,18 @@ If you have a project you'd like to have listed here, contact a maintainer in di
 - Item IDs can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted)
 , for use in the API.
 
-For any of the following urls, .json is optional and is the default, and .json can be replaced with .xml for xml
+For any of the following URLs, `.json` is optional and is the default. For XML, replace `.json` with `.xml`.  Prefix the API paths with the DNS name `https://west.albion-online-data.com` for the Albion West data or `https://east.albion-online-data.com` for the Albion East data.
 
-- Current Prices (Table View): [`/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2`](https://www.albion-online-data.com/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
-- Current Prices (JSON): [`/api/v2/stats/prices/T4_BAG,T5_BAG.json?locations=Caerleon,Bridgewatch&qualities=2`](https://www.albion-online-data.com/api/v2/stats/prices/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
+- Current Prices (Table View): [`/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2`](https://west.albion-online-data.com/api/v2/stats/view/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
+- Current Prices (JSON): [`/api/v2/stats/prices/T4_BAG,T5_BAG.json?locations=Caerleon,Bridgewatch&qualities=2`](https://west.albion-online-data.com/api/v2/stats/prices/T4_BAG,T5_BAG?locations=Caerleon,Bridgewatch&qualities=2)
 - Historical Prices (sell orders only):
-  - **New!** [`/api/v2/stats/history/T4_BAG,T5_BAG.json?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6`](https://www.albion-online-data.com/api/v2/stats/history/T4_BAG?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6)
-  - **New!** Hourly (time-scale=1): [`/api/v2/stats/history/T4_BAG,T5_BAG.json?time-scale=1`](https://www.albion-online-data.com/api/v2/stats/history/T4_BAG?time-scale=1)
-  - **New!** Daily (time-scale=24): [`/api/v2/stats/history/T4_BAG,T5_BAG.json?time-scale=24`](https://www.albion-online-data.com/api/v2/stats/history/T4_BAG?time-scale=24)
-  - **New!** For charts: [`/api/v2/stats/charts/T4_BAG,T5_BAG.json?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6`](https://www.albion-online-data.com/api/v2/stats/charts/T4_BAG?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6)
+  - **New!** [`/api/v2/stats/history/T4_BAG,T5_BAG.json?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6`](https://west.albion-online-data.com/api/v2/stats/history/T4_BAG?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6)
+  - **New!** Hourly (time-scale=1): [`/api/v2/stats/history/T4_BAG,T5_BAG.json?time-scale=1`](https://west.albion-online-data.com/api/v2/stats/history/T4_BAG?time-scale=1)
+  - **New!** Daily (time-scale=24): [`/api/v2/stats/history/T4_BAG,T5_BAG.json?time-scale=24`](https://west.albion-online-data.com/api/v2/stats/history/T4_BAG?time-scale=24)
+  - **New!** For charts: [`/api/v2/stats/charts/T4_BAG,T5_BAG.json?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6`](https://west.albion-online-data.com/api/v2/stats/charts/T4_BAG?date=2-5-2020&end_date=2-12-2020&locations=Caerleon&qualities=2&time-scale=6)
 - Gold Prices:
-  - **New!** Over time: [`/api/v2/stats/gold.json?date=2-5-2020&end_date=2-12-2020`](https://www.albion-online-data.com/api/v2/stats/gold?date=2-5-2020&end_date=2-12-2020)
-  - **New!** Most recent X prices: [`/api/v2/stats/gold.json?count=2`](https://www.albion-online-data.com/api/v2/stats/gold?count=2)
+  - **New!** Over time: [`/api/v2/stats/gold.json?date=2-5-2020&end_date=2-12-2020`](https://west.albion-online-data.com/api/v2/stats/gold?date=2-5-2020&end_date=2-12-2020)
+  - **New!** Most recent X prices: [`/api/v2/stats/gold.json?count=2`](https://west.albion-online-data.com/api/v2/stats/gold?count=2)
   
 ### API Endpoint Rate Limits
 
@@ -81,7 +81,7 @@ limit. Combine the item's you want to get data on, as well as locations.
 There's a 4096 character limit for the url length. You can fit a lot of
 items and all the locations in a single call.
 
-Something like [this](https://www.albion-online-data.com/api/v1/stats/prices/T2_SHOES_CLOTH_SET1,T3_SHOES_CLOTH_SET1,T4_SHOES_CLOTH_SET1,T4_SHOES_CLOTH_SET1@1,T4_SHOES_CLOTH_SET1@2,T4_SHOES_CLOTH_SET1@3,T4_SHOES_CLOTH_SET1@4,T5_SHOES_CLOTH_SET1,T5_SHOES_CLOTH_SET1@1,T5_SHOES_CLOTH_SET1@2,T5_SHOES_CLOTH_SET1@3,T5_SHOES_CLOTH_SET1@4,T6_SHOES_CLOTH_SET1,T6_SHOES_CLOTH_SET1@1,T6_SHOES_CLOTH_SET1@2,T6_SHOES_CLOTH_SET1@3,T6_SHOES_CLOTH_SET1@4,T7_SHOES_CLOTH_SET1,T7_SHOES_CLOTH_SET1@1,T7_SHOES_CLOTH_SET1@2,T7_SHOES_CLOTH_SET1@3,T7_SHOES_CLOTH_SET1@4,T8_SHOES_CLOTH_SET1,T8_SHOES_CLOTH_SET1@1,T8_SHOES_CLOTH_SET1@2,T8_SHOES_CLOTH_SET1@3,T8_SHOES_CLOTH_SET1@4,T4_SHOES_CLOTH_SET2,T4_SHOES_CLOTH_SET2@1,T4_SHOES_CLOTH_SET2@2,T4_SHOES_CLOTH_SET2@3,T4_SHOES_CLOTH_SET2@4,T5_SHOES_CLOTH_SET2,T5_SHOES_CLOTH_SET2@1,T5_SHOES_CLOTH_SET2@2,T5_SHOES_CLOTH_SET2@3,T5_SHOES_CLOTH_SET2@4,T6_SHOES_CLOTH_SET2,T6_SHOES_CLOTH_SET2@1,T6_SHOES_CLOTH_SET2@2,T6_SHOES_CLOTH_SET2@3,T6_SHOES_CLOTH_SET2@4,T7_SHOES_CLOTH_SET2,T7_SHOES_CLOTH_SET2@1,T7_SHOES_CLOTH_SET2@2,T7_SHOES_CLOTH_SET2@3,T7_SHOES_CLOTH_SET2@4,T8_SHOES_CLOTH_SET2,T8_SHOES_CLOTH_SET2@1,T8_SHOES_CLOTH_SET2@2,T8_SHOES_CLOTH_SET2@3,T8_SHOES_CLOTH_SET2@4,T4_SHOES_CLOTH_SET3,T4_SHOES_CLOTH_SET3@1,T4_SHOES_CLOTH_SET3@2,T4_SHOES_CLOTH_SET3@3,T4_SHOES_CLOTH_SET3@4,T5_SHOES_CLOTH_SET3,T5_SHOES_CLOTH_SET3@1,T5_SHOES_CLOTH_SET3@2,T5_SHOES_CLOTH_SET3@3,T5_SHOES_CLOTH_SET3@4,T6_SHOES_CLOTH_SET3,T6_SHOES_CLOTH_SET3@1,T6_SHOES_CLOTH_SET3@2,T6_SHOES_CLOTH_SET3@3,T6_SHOES_CLOTH_SET3@4,T7_SHOES_CLOTH_SET3,T7_SHOES_CLOTH_SET3@1,T7_SHOES_CLOTH_SET3@2,T7_SHOES_CLOTH_SET3@3,T7_SHOES_CLOTH_SET3@4,T8_SHOES_CLOTH_SET3,T8_SHOES_CLOTH_SET3@1,T8_SHOES_CLOTH_SET3@2,T8_SHOES_CLOTH_SET3@3,T8_SHOES_CLOTH_SET3@4,T4_SHOES_CLOTH_KEEPER,T4_SHOES_CLOTH_KEEPER@1,T4_SHOES_CLOTH_KEEPER@2,T4_SHOES_CLOTH_KEEPER@3,T4_SHOES_CLOTH_KEEPER@4,T5_SHOES_CLOTH_KEEPER,T5_SHOES_CLOTH_KEEPER@1,T5_SHOES_CLOTH_KEEPER@2,T5_SHOES_CLOTH_KEEPER@3,T5_SHOES_CLOTH_KEEPER@4,T6_SHOES_CLOTH_KEEPER,T6_SHOES_CLOTH_KEEPER@1,T6_SHOES_CLOTH_KEEPER@2,T6_SHOES_CLOTH_KEEPER@3,T6_SHOES_CLOTH_KEEPER@4,T7_SHOES_CLOTH_KEEPER,T7_SHOES_CLOTH_KEEPER@1,T7_SHOES_CLOTH_KEEPER@2,T7_SHOES_CLOTH_KEEPER@3,T7_SHOES_CLOTH_KEEPER@4,T8_SHOES_CLOTH_KEEPER,T8_SHOES_CLOTH_KEEPER@1,T8_SHOES_CLOTH_KEEPER@2,T8_SHOES_CLOTH_KEEPER@3,T8_SHOES_CLOTH_KEEPER@4,T4_SHOES_CLOTH_HELL,T4_SHOES_CLOTH_HELL@1,T4_SHOES_CLOTH_HELL@2,T4_SHOES_CLOTH_HELL@3,T4_SHOES_CLOTH_HELL@4,T5_SHOES_CLOTH_HELL,T5_SHOES_CLOTH_HELL@1,T5_SHOES_CLOTH_HELL@2,T5_SHOES_CLOTH_HELL@3,T5_SHOES_CLOTH_HELL@4,T6_SHOES_CLOTH_HELL,T6_SHOES_CLOTH_HELL@1,T6_SHOES_CLOTH_HELL@2,T6_SHOES_CLOTH_HELL@3,T6_SHOES_CLOTH_HELL@4,T7_SHOES_CLOTH_HELL,T7_SHOES_CLOTH_HELL@1,T7_SHOES_CLOTH_HELL@2?locations=4,7,8,301,1002,1006,1012,1301,2002,2004,2301,3002,3003,3005,3008,3301,4002,4006,4300,4301,5003&qualities=1,2,3,4,5) (too big to show on the page!).
+Something like [this](https://west.albion-online-data.com/api/v1/stats/prices/T2_SHOES_CLOTH_SET1,T3_SHOES_CLOTH_SET1,T4_SHOES_CLOTH_SET1,T4_SHOES_CLOTH_SET1@1,T4_SHOES_CLOTH_SET1@2,T4_SHOES_CLOTH_SET1@3,T4_SHOES_CLOTH_SET1@4,T5_SHOES_CLOTH_SET1,T5_SHOES_CLOTH_SET1@1,T5_SHOES_CLOTH_SET1@2,T5_SHOES_CLOTH_SET1@3,T5_SHOES_CLOTH_SET1@4,T6_SHOES_CLOTH_SET1,T6_SHOES_CLOTH_SET1@1,T6_SHOES_CLOTH_SET1@2,T6_SHOES_CLOTH_SET1@3,T6_SHOES_CLOTH_SET1@4,T7_SHOES_CLOTH_SET1,T7_SHOES_CLOTH_SET1@1,T7_SHOES_CLOTH_SET1@2,T7_SHOES_CLOTH_SET1@3,T7_SHOES_CLOTH_SET1@4,T8_SHOES_CLOTH_SET1,T8_SHOES_CLOTH_SET1@1,T8_SHOES_CLOTH_SET1@2,T8_SHOES_CLOTH_SET1@3,T8_SHOES_CLOTH_SET1@4,T4_SHOES_CLOTH_SET2,T4_SHOES_CLOTH_SET2@1,T4_SHOES_CLOTH_SET2@2,T4_SHOES_CLOTH_SET2@3,T4_SHOES_CLOTH_SET2@4,T5_SHOES_CLOTH_SET2,T5_SHOES_CLOTH_SET2@1,T5_SHOES_CLOTH_SET2@2,T5_SHOES_CLOTH_SET2@3,T5_SHOES_CLOTH_SET2@4,T6_SHOES_CLOTH_SET2,T6_SHOES_CLOTH_SET2@1,T6_SHOES_CLOTH_SET2@2,T6_SHOES_CLOTH_SET2@3,T6_SHOES_CLOTH_SET2@4,T7_SHOES_CLOTH_SET2,T7_SHOES_CLOTH_SET2@1,T7_SHOES_CLOTH_SET2@2,T7_SHOES_CLOTH_SET2@3,T7_SHOES_CLOTH_SET2@4,T8_SHOES_CLOTH_SET2,T8_SHOES_CLOTH_SET2@1,T8_SHOES_CLOTH_SET2@2,T8_SHOES_CLOTH_SET2@3,T8_SHOES_CLOTH_SET2@4,T4_SHOES_CLOTH_SET3,T4_SHOES_CLOTH_SET3@1,T4_SHOES_CLOTH_SET3@2,T4_SHOES_CLOTH_SET3@3,T4_SHOES_CLOTH_SET3@4,T5_SHOES_CLOTH_SET3,T5_SHOES_CLOTH_SET3@1,T5_SHOES_CLOTH_SET3@2,T5_SHOES_CLOTH_SET3@3,T5_SHOES_CLOTH_SET3@4,T6_SHOES_CLOTH_SET3,T6_SHOES_CLOTH_SET3@1,T6_SHOES_CLOTH_SET3@2,T6_SHOES_CLOTH_SET3@3,T6_SHOES_CLOTH_SET3@4,T7_SHOES_CLOTH_SET3,T7_SHOES_CLOTH_SET3@1,T7_SHOES_CLOTH_SET3@2,T7_SHOES_CLOTH_SET3@3,T7_SHOES_CLOTH_SET3@4,T8_SHOES_CLOTH_SET3,T8_SHOES_CLOTH_SET3@1,T8_SHOES_CLOTH_SET3@2,T8_SHOES_CLOTH_SET3@3,T8_SHOES_CLOTH_SET3@4,T4_SHOES_CLOTH_KEEPER,T4_SHOES_CLOTH_KEEPER@1,T4_SHOES_CLOTH_KEEPER@2,T4_SHOES_CLOTH_KEEPER@3,T4_SHOES_CLOTH_KEEPER@4,T5_SHOES_CLOTH_KEEPER,T5_SHOES_CLOTH_KEEPER@1,T5_SHOES_CLOTH_KEEPER@2,T5_SHOES_CLOTH_KEEPER@3,T5_SHOES_CLOTH_KEEPER@4,T6_SHOES_CLOTH_KEEPER,T6_SHOES_CLOTH_KEEPER@1,T6_SHOES_CLOTH_KEEPER@2,T6_SHOES_CLOTH_KEEPER@3,T6_SHOES_CLOTH_KEEPER@4,T7_SHOES_CLOTH_KEEPER,T7_SHOES_CLOTH_KEEPER@1,T7_SHOES_CLOTH_KEEPER@2,T7_SHOES_CLOTH_KEEPER@3,T7_SHOES_CLOTH_KEEPER@4,T8_SHOES_CLOTH_KEEPER,T8_SHOES_CLOTH_KEEPER@1,T8_SHOES_CLOTH_KEEPER@2,T8_SHOES_CLOTH_KEEPER@3,T8_SHOES_CLOTH_KEEPER@4,T4_SHOES_CLOTH_HELL,T4_SHOES_CLOTH_HELL@1,T4_SHOES_CLOTH_HELL@2,T4_SHOES_CLOTH_HELL@3,T4_SHOES_CLOTH_HELL@4,T5_SHOES_CLOTH_HELL,T5_SHOES_CLOTH_HELL@1,T5_SHOES_CLOTH_HELL@2,T5_SHOES_CLOTH_HELL@3,T5_SHOES_CLOTH_HELL@4,T6_SHOES_CLOTH_HELL,T6_SHOES_CLOTH_HELL@1,T6_SHOES_CLOTH_HELL@2,T6_SHOES_CLOTH_HELL@3,T6_SHOES_CLOTH_HELL@4,T7_SHOES_CLOTH_HELL,T7_SHOES_CLOTH_HELL@1,T7_SHOES_CLOTH_HELL@2?locations=4,7,8,301,1002,1006,1012,1301,2002,2004,2301,3002,3003,3005,3008,3301,4002,4006,4300,4301,5003&qualities=1,2,3,4,5) (too big to show on the page!).
 
 We also ask that if you are going to write a service that continually hits the
 API, please use Gzip compression. The server and bandwidth isn't free and while
@@ -95,10 +95,10 @@ single best way to do this, but some of the common ways are as follows:
 
 - [Excel Power Query](https://support.office.com/en-us/article/introduction-to-microsoft-power-query-for-excel-6e92e2f4-2079-4e1f-bad5-89f6269cd605)
 - [Google Sheets IMPORTXML](https://support.google.com/docs/answer/3093342?hl=en)
-  - Example: `=IMPORTXML("https://www.albion-online-data.com/api/v2/stats/prices/T4_BAG.xml?locations=Caerleon&qualities=2","//ArrayOfMarketResponse/MarketResponse")`
+  - Example: `=IMPORTXML("https://west.albion-online-data.com/api/v2/stats/prices/T4_BAG.xml?locations=Caerleon&qualities=2","//ArrayOfMarketResponse/MarketResponse")`
 - [Google Sheets ImportJSON (third-party script)](https://github.com/bradjasper/ImportJSON)
   - Note: Some people have noticed issues with ImportJSON and repeating rows
-  - Example: `=ImportJSON("https://www.albion-online-data.com/api/v2/stats/prices/T4_BAG.json?locations=Caerleon&qualities=2", "", "noHeaders")`
+  - Example: `=ImportJSON("https://west.albion-online-data.com/api/v2/stats/prices/T4_BAG.json?locations=Caerleon&qualities=2", "", "noHeaders")`
 
 # Related Albion Tools
 - [Albion Online Stats - DPS tracker](https://github.com/mazurwiktor/albion-online-stats)
@@ -118,7 +118,7 @@ At the time of writing the following are the available (well-supported) configur
   -events-ignore string
     	Blacklist of event IDs to hide messages when debugging. Comma separated.
   -i string
-    	Base URL to send PUBLIC data to, can be 'nats://', 'http://' or 'noop' and can have multiple uploaders. Comma separated. (default "http+pow://www.albion-online-data.com:4223")
+    	Base URL to send PUBLIC data to, can be 'nats://', 'http://' or 'noop' and can have multiple uploaders. Comma separated. (default is "http+pow://pow.west.albion-online-data.com" or "http+pow://pow.east.albion-online-data.com" determined by the game server you connect to)
   -ignore-decode-errors
     	Ignore the decoding errors when debugging
   -l string
@@ -233,7 +233,9 @@ for example, per_minute is 270*2, which means you can send 270 chunks of data pe
 # Developer Information
 If you're building something to consume the data published by the
 Albion Data Project here are some things you will need to know:
-- NATS Connection String: nats://public:thenewalbiondata@www.albion-online-data.com:4222
+- NATS Connection String:
+  - West Game Server:  nats://public:thenewalbiondata@west.albion-online-data.com:4222
+  - East Game Server:  nats://public:thenewalbiondata@east.albion-online-data.com:24222
 - NATS Topics:
   - `goldprices.deduped`
   - `marketorders.deduped`
