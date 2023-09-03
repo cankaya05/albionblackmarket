@@ -45,8 +45,9 @@ different selling metrics for the Auction Houses.
 options for you based on current prices.
 - [Albion Helper](https://forum.albiononline.com/index.php/Thread/174675-Beta-Albion-Helper-Discord-Market-Bot-Crafting-Calculator/#post1270471)
  (forked from Albion Assistant) A discord bot to retrieve prices from Albion Online Data Project APIs. Maintained by Discord User Divined#9833.
-- [Albionix Tools](https://albionix.app/) is a calculator for Transporting Item profitability and some market analysis.
-Maintained by Discord User Kytavian#4406.
+- [Albionix Tools](https://albionix.app/) is a calculator for Transporting Item profitability and some market analysis. Maintained by Discord User Kytavian#4406.
+- [Albion Online Tools](https://albiononlinetools.com/) is a site with a bunch of tools for Albion Online users. Maintained by Discord User legita.
+
 
 If you have a project you'd like to have listed here, contact a maintainer in discord to talk about it.
 
@@ -239,8 +240,8 @@ for example, per_minute is 270*2, which means you can send 270 chunks of data pe
 If you're building something to consume the data published by the
 Albion Data Project here are some things you will need to know:
 - NATS Connection String:
-  - West Game Server:  nats://public:thenewalbiondata@west.albion-online-data.com:4222
-  - East Game Server:  nats://public:thenewalbiondata@east.albion-online-data.com:24222
+  - West Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:4222
+  - East Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:24222
 - NATS Topics:
   - `goldprices.ingest` (all gold prices that come in from data clients, including all duplicates)
   - `marketorders.ingest` (all orders that come in from data clients, including all duplicates)
