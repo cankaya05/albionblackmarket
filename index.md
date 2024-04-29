@@ -242,8 +242,9 @@ for example, per_minute is 270*2, which means you can send 270 chunks of data pe
 If you're building something to consume the data published by the
 Albion Data Project here are some things you will need to know:
 - NATS Connection String:
-  - West Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:4222
-  - East Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:24222
+  - Americas Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:4222
+  - Asia Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:24222
+  - Europe Game Server:  nats://public:thenewalbiondata@nats.albion-online-data.com:34222
 - NATS Topics:
   - `goldprices.ingest` (all gold prices that come in from data clients, including all duplicates)
   - `marketorders.ingest` (all orders that come in from data clients, including all duplicates)
