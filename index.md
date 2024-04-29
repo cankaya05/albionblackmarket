@@ -56,8 +56,9 @@ If you have a project you'd like to have listed here, contact a maintainer in di
 ## Market data can be also be obtained through the API
 ### API Host URLs
 
-- Albion Online West Server: `https://west.albion-online-data.com`
-- Albion Online East Server: `https://east.albion-online-data.com`
+- Albion Online Americas Server: `https://west.albion-online-data.com`
+- Albion Online Asia Server: `https://east.albion-online-data.com`
+- Albion Online Europe Server: `https://europe.albion-online-data.com`
 
 ### API Enpoints
 - [Swagger documentation available here](https://west.albion-online-data.com/api/swagger).
