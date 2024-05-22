@@ -61,7 +61,7 @@ If you have a project you'd like to have listed here, contact a maintainer in di
 - Albion Online Europe Server: `https://europe.albion-online-data.com`
 
 ### API Enpoints
-- [Swagger documentation available here](https://west.albion-online-data.com/api/swagger).
+- [Swagger documentation available here](https://old.west.albion-online-data.com/api/swagger).
 - Item IDs can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted) items.txt or items.json files.
 - Location IDs or String Names can be found in the [formatted metadata](https://github.com/ao-data/ao-bin-dumps/tree/master/formatted) world.txt or world.json files.
 
