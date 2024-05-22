@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
+gem 'jekyll', '~> 4.3', '>= 4.3.3'
 gem 'just-the-docs', '~> 0.4.0.rc3'
