@@ -3,11 +3,14 @@ title: The Albion Online Data Project
 description: A distributed network to collect and share public Albion Online data.
 google_analytics: UA-96858200-3
 
+host: 0.0.0.0
+
 # External navigation links
 nav_external_links:
   - title: Download the Client
     url: https://github.com/ao-data/albiondata-client/releases
     hide_icon: false
+    nav_order: 1
   - title: Client Download Stats
     url: https://tooomm.github.io/github-release-stats/?username=ao-data&repository=albiondata-client
     hide_icon: false
@@ -19,7 +22,7 @@ exclude:
   - Gemfile
   - new
   
-search_enabled: false
+search_enabled: true
 color_scheme: dark
 
 callouts:
@@ -37,3 +40,13 @@ callouts:
   warning:
     title: Warning
     color: red
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+
+
+sass:
+  quiet_deps: true
