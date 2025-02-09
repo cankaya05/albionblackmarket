@@ -74,9 +74,9 @@ New people connecting to the network may have missed previous messages. Along wi
 
 You can find daily table dumps on the server at following locations:
 
-- West Server / Americas - [https://www.albion-online-data.com/database](https://www.albion-online-data.com/database)
-- East Server / Asia - [https://www.albion-online-data.com/database-east](https://www.albion-online-data.com/database-east)
-- Europe Server - [https://www.albion-online-data.com/database-europe](https://www.albion-online-data.com/database-europe)
+- West Server / Americas - [https://www.albion-online-data.com/database/](https://www.albion-online-data.com/database/)
+- East Server / Asia - [https://www.albion-online-data.com/database-east/](https://www.albion-online-data.com/database-east/)
+- Europe Server - [https://www.albion-online-data.com/database-europe/](https://www.albion-online-data.com/database-europe/)
 
 TODO: Add information about daily, monthly and historical monthly backups.
 
