@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Spread Sheets
-parent: API
+parent: API Info
 nav_order: 3
 ---
 
 ### Spreadsheets
 
-Many people find it useful to load these APIs in spreadsheets such as Microsoft Excel or Google Sheets. There is no 
+Many people find it useful to load these APIs in spreadsheets such as Microsoft Excel or Google Sheets. There is no
 single best way to do this, but some of the common ways are as follows:
 
 - [Excel Power Query](https://support.office.com/en-us/article/introduction-to-microsoft-power-query-for-excel-6e92e2f4-2079-4e1f-bad5-89f6269cd605)
