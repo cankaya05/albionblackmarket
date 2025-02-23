@@ -100,4 +100,8 @@ the #developers channel. A permanent invite link can be found here: [https://dis
 > Our position is quite simple. As long as you just look and analyze we are ok with it. The moment you modify or 
 manipulate something or somehow interfere with our services we will react (e.g. perma-ban, take legal action, whatever).
 
-> ~MadDave, Technical Lead at Sandbox Interactive for Albion Online, [source](https://forum.albiononline.com/index.php/Thread/51604-Is-it-allowed-to-scan-your-internet-trafic-and-pick-up-logs/?postID=512670#post512670)
+> ~MadDave, in 2017, Technical Lead at Sandbox Interactive for Albion Online, [source](https://forum.albiononline.com/index.php/Thread/51604-Is-it-allowed-to-scan-your-internet-trafic-and-pick-up-logs/?postID=512670#post512670)
+![MadDave Aprooval Image](../images/maddave-approval.png)
+
+> ~SirisLi, in 2025, Community Manager, [source](https://forum.albiononline.com/index.php/Thread/206875-Albion-Market-API-Encryption/?postID=1409736#post1409736)
+![SirisLi Approval Image](../images/sirisli-approval.png)
