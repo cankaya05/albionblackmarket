@@ -6,7 +6,7 @@ nav_order: 30
 # The best way to make use of the data stored by AODP is by using the tools that are built on it:
 
 - [Albion Free Market](https://albionfreemarket.com/) is a platform where you can assess market prices, discover cost-effective gear and simulate crafting outcomes. It's brought to you by the JP CodeCraft team.
-- - [Albion Black Market Tools](https://albionblackmarket.com/) offers real-time Black Market flipping analysis, Avalon Map tracking, and Silver optimization tools. Developed and maintained by Garip Guild.
+-  [Albion Black Market Tools](https://albionblackmarket.com/) offers real-time Black Market flipping analysis, Avalon Map tracking, and Silver optimization tools. Developed and maintained by Garip Guild.
 - [Tools4Albion](https://www.tools4albion.com) provides calculators for crafting, farming, and reprocessing. Has a lot
 of useful information for users and developers alike.
 - [AlbionOnline2d](https://www.albiononline2d.com/en/market) pulls the latest information from the database and shows
